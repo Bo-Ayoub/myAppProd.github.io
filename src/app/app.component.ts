@@ -7,4 +7,30 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'my-app';
+  
+
+
+   greetPeople(greeting:string, ...names:string[]):void {
+
+    console.log( greeting+','+names.join(' and ')+'!');
+  }
+
+
+   greetPeople2 = (greeting: string, ...names: string[]): string => {
+    return `${greeting}, ${names.join(' and ')}!`;
+};
+
+
+  
+
+
+
+
+  
+
+
 }
+
+const component=new AppComponent();
+
+component.greetPeople("hello","ayoub","ahmed","karim");
